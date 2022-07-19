@@ -36,7 +36,7 @@
             this.txtBoxPass = new System.Windows.Forms.TextBox();
             this.lbPass = new System.Windows.Forms.Label();
             this.kryptonBtnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonBtnExit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonBtnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,90 +206,90 @@
             this.kryptonBtnLogin.Values.Text = "Login";
             this.kryptonBtnLogin.Click += new System.EventHandler(this.kryptonBtnLogin_Click);
             // 
-            // kryptonBtnExit
+            // kryptonBtnClear
             // 
-            this.kryptonBtnExit.Location = new System.Drawing.Point(348, 242);
-            this.kryptonBtnExit.Name = "kryptonBtnExit";
-            this.kryptonBtnExit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.Location = new System.Drawing.Point(348, 242);
+            this.kryptonBtnClear.Name = "kryptonBtnClear";
+            this.kryptonBtnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.OverrideDefault.Border.Rounding = 20;
-            this.kryptonBtnExit.OverrideDefault.Border.Width = 1;
-            this.kryptonBtnExit.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.OverrideDefault.Border.Rounding = 20;
+            this.kryptonBtnClear.OverrideDefault.Border.Width = 1;
+            this.kryptonBtnClear.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.OverrideFocus.Border.Rounding = 20;
-            this.kryptonBtnExit.OverrideFocus.Border.Width = 1;
-            this.kryptonBtnExit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonBtnExit.Size = new System.Drawing.Size(150, 43);
-            this.kryptonBtnExit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonBtnExit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.OverrideFocus.Border.Rounding = 20;
+            this.kryptonBtnClear.OverrideFocus.Border.Width = 1;
+            this.kryptonBtnClear.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonBtnClear.Size = new System.Drawing.Size(150, 43);
+            this.kryptonBtnClear.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonBtnClear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.StateCommon.Border.Rounding = 20;
-            this.kryptonBtnExit.StateCommon.Border.Width = 1;
-            this.kryptonBtnExit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonBtnExit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonBtnExit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonBtnExit.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.StateCommon.Border.Rounding = 20;
+            this.kryptonBtnClear.StateCommon.Border.Width = 1;
+            this.kryptonBtnClear.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonBtnClear.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonBtnClear.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.kryptonBtnClear.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.StateDisabled.Border.Rounding = 20;
-            this.kryptonBtnExit.StateDisabled.Border.Width = 1;
-            this.kryptonBtnExit.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.StateDisabled.Border.Rounding = 20;
+            this.kryptonBtnClear.StateDisabled.Border.Width = 1;
+            this.kryptonBtnClear.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.StateNormal.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.StateNormal.Border.Rounding = 20;
-            this.kryptonBtnExit.StateNormal.Border.Width = 1;
-            this.kryptonBtnExit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.StateNormal.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.StateNormal.Border.Rounding = 20;
+            this.kryptonBtnClear.StateNormal.Border.Width = 1;
+            this.kryptonBtnClear.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.StatePressed.Border.Rounding = 20;
-            this.kryptonBtnExit.StatePressed.Border.Width = 1;
-            this.kryptonBtnExit.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonBtnExit.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonBtnExit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonBtnExit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnClear.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.StatePressed.Border.Rounding = 20;
+            this.kryptonBtnClear.StatePressed.Border.Width = 1;
+            this.kryptonBtnClear.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonBtnClear.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonBtnClear.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnClear.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonBtnExit.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonBtnExit.StateTracking.Border.Rounding = 20;
-            this.kryptonBtnExit.StateTracking.Border.Width = 1;
-            this.kryptonBtnExit.TabIndex = 6;
-            this.kryptonBtnExit.Values.Text = "Exit";
-            this.kryptonBtnExit.Click += new System.EventHandler(this.kryptonBtnExit_Click);
+            this.kryptonBtnClear.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnClear.StateTracking.Border.Rounding = 20;
+            this.kryptonBtnClear.StateTracking.Border.Width = 1;
+            this.kryptonBtnClear.TabIndex = 6;
+            this.kryptonBtnClear.Values.Text = "Clear";
+            this.kryptonBtnClear.Click += new System.EventHandler(this.kryptonBtnClear_Click);
             // 
             // LoginForm
             // 
@@ -297,7 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(528, 312);
-            this.Controls.Add(this.kryptonBtnExit);
+            this.Controls.Add(this.kryptonBtnClear);
             this.Controls.Add(this.kryptonBtnLogin);
             this.Controls.Add(this.txtBoxPass);
             this.Controls.Add(this.lbPass);
@@ -325,6 +325,6 @@
         private System.Windows.Forms.TextBox txtBoxPass;
         private System.Windows.Forms.Label lbPass;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonBtnLogin;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonBtnExit;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonBtnClear;
     }
 }

@@ -18,9 +18,10 @@ namespace ParentalControlNew
             InitializeComponent();
         }
 
-        private void kryptonBtnExit_Click(object sender, EventArgs e)
+        private void kryptonBtnClear_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            txtBoxUser.Clear();
+            txtBoxPass.Clear();
         }
         private bool IsValid()
         {
@@ -34,11 +35,11 @@ namespace ParentalControlNew
                     MessageBox.Show("Enter valid password please!", "Error");
                     return false;
                 }
-             if(txtBoxUser.Text.ToLower() == "admin" && txtBoxPass.Text == "1111")
+             if(txtBoxUser.Text.ToLower().TrimStart() == "admin" && txtBoxPass.Text.TrimStart() == "1111")
                 {
                   Form1 s = new Form1();
                   s.ShowDialog();
-                  this.Close();
+                  Close();
                 }
             else
             {
