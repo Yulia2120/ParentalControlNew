@@ -216,12 +216,16 @@ namespace ParentalControlNew
 
         private void exitToolStripMenuItemExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void toolStripTextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-
+            GetProcesses();
+            List<Process> filterproc = processes.Where((x) => x.ProcessName.ToLower().Contains(toolStripTextBoxSearch.Text.ToLower())).ToList();
+            RefreshProcesList(filterproc, toolStripTextBoxSearch.Text);
         }
+
+      
     }
 }

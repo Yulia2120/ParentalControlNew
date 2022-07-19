@@ -167,6 +167,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
+            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip.Size = new System.Drawing.Size(884, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
@@ -183,14 +184,14 @@
             // toolStripMenuItemRun
             // 
             this.toolStripMenuItemRun.Name = "toolStripMenuItemRun";
-            this.toolStripMenuItemRun.Size = new System.Drawing.Size(153, 22);
+            this.toolStripMenuItemRun.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemRun.Text = "Run a new task";
             this.toolStripMenuItemRun.Click += new System.EventHandler(this.toolStripMenuItemRun_Click);
             // 
             // exitToolStripMenuItemExit
             // 
             this.exitToolStripMenuItemExit.Name = "exitToolStripMenuItemExit";
-            this.exitToolStripMenuItemExit.Size = new System.Drawing.Size(153, 22);
+            this.exitToolStripMenuItemExit.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItemExit.Text = "Exit";
             this.exitToolStripMenuItemExit.Click += new System.EventHandler(this.exitToolStripMenuItemExit_Click);
             // 
@@ -198,12 +199,14 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButRefresh,
             this.toolStripButComplete,
             this.toolStripButComTree});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(884, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
@@ -242,11 +245,13 @@
             // 
             this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelSearch,
             this.toolStripTextBoxSearch});
             this.toolStrip2.Location = new System.Drawing.Point(0, 49);
             this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip2.Size = new System.Drawing.Size(884, 25);
             this.toolStrip2.TabIndex = 3;
             this.toolStrip2.Text = "toolStrip2";
@@ -254,14 +259,16 @@
             // toolStripLabelSearch
             // 
             this.toolStripLabelSearch.Name = "toolStripLabelSearch";
-            this.toolStripLabelSearch.Size = new System.Drawing.Size(45, 22);
-            this.toolStripLabelSearch.Text = "Search:";
+            this.toolStripLabelSearch.Size = new System.Drawing.Size(48, 22);
+            this.toolStripLabelSearch.Text = " Search:";
             // 
             // toolStripTextBoxSearch
             // 
+            this.toolStripTextBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
+            this.toolStripTextBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.toolStripTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBoxSearch.Name = "toolStripTextBoxSearch";
-            this.toolStripTextBoxSearch.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBoxSearch.Size = new System.Drawing.Size(140, 25);
             this.toolStripTextBoxSearch.TextChanged += new System.EventHandler(this.toolStripTextBoxSearch_TextChanged);
             // 
             // listView
