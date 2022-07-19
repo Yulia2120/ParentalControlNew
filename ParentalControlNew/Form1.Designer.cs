@@ -37,9 +37,6 @@
             this.toolStripMenuItemRun = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButRefresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButComplete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButComTree = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelSearch = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBoxSearch = new System.Windows.Forms.ToolStripTextBox();
@@ -48,6 +45,14 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.completeProcessTreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComplete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComTree = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -77,7 +82,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(688, 487);
+            this.kryptonButton1.Location = new System.Drawing.Point(641, 487);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
@@ -157,7 +162,7 @@
             this.kryptonButton1.StateTracking.Border.Rounding = 20;
             this.kryptonButton1.StateTracking.Border.Width = 1;
             this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Text = "kryptonButton1";
+            this.kryptonButton1.Values.Text = "Заблокировать";
             // 
             // menuStrip
             // 
@@ -184,14 +189,14 @@
             // toolStripMenuItemRun
             // 
             this.toolStripMenuItemRun.Name = "toolStripMenuItemRun";
-            this.toolStripMenuItemRun.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemRun.Size = new System.Drawing.Size(153, 22);
             this.toolStripMenuItemRun.Text = "Run a new task";
             this.toolStripMenuItemRun.Click += new System.EventHandler(this.toolStripMenuItemRun_Click);
             // 
             // exitToolStripMenuItemExit
             // 
             this.exitToolStripMenuItemExit.Name = "exitToolStripMenuItemExit";
-            this.exitToolStripMenuItemExit.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItemExit.Size = new System.Drawing.Size(153, 22);
             this.exitToolStripMenuItemExit.Text = "Exit";
             this.exitToolStripMenuItemExit.Click += new System.EventHandler(this.exitToolStripMenuItemExit_Click);
             // 
@@ -210,36 +215,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(884, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButRefresh
-            // 
-            this.toolStripButRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButRefresh.Image")));
-            this.toolStripButRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButRefresh.Name = "toolStripButRefresh";
-            this.toolStripButRefresh.Size = new System.Drawing.Size(50, 22);
-            this.toolStripButRefresh.Text = "Refresh";
-            this.toolStripButRefresh.Click += new System.EventHandler(this.toolStripButRefresh_Click);
-            // 
-            // toolStripButComplete
-            // 
-            this.toolStripButComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComplete.Image")));
-            this.toolStripButComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButComplete.Name = "toolStripButComplete";
-            this.toolStripButComplete.Size = new System.Drawing.Size(63, 22);
-            this.toolStripButComplete.Text = "Complete";
-            this.toolStripButComplete.Click += new System.EventHandler(this.toolStripButComplete_Click);
-            // 
-            // toolStripButComTree
-            // 
-            this.toolStripButComTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButComTree.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComTree.Image")));
-            this.toolStripButComTree.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButComTree.Name = "toolStripButComTree";
-            this.toolStripButComTree.Size = new System.Drawing.Size(130, 22);
-            this.toolStripButComTree.Text = "Complete Process Tree";
-            this.toolStripButComTree.Click += new System.EventHandler(this.toolStripButComTree_Click);
             // 
             // toolStrip2
             // 
@@ -315,12 +290,93 @@
             this.completeProcessTreeToolStripMenuItem.Text = "Complete Process Tree";
             this.completeProcessTreeToolStripMenuItem.Click += new System.EventHandler(this.completeProcessTreeToolStripMenuItem_Click);
             // 
+            // toolStripButRefresh
+            // 
+            this.toolStripButRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButRefresh.Image")));
+            this.toolStripButRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButRefresh.Name = "toolStripButRefresh";
+            this.toolStripButRefresh.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButRefresh.Text = "Refresh";
+            this.toolStripButRefresh.Click += new System.EventHandler(this.toolStripButRefresh_Click);
+            // 
+            // toolStripButComplete
+            // 
+            this.toolStripButComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComplete.Image")));
+            this.toolStripButComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComplete.Name = "toolStripButComplete";
+            this.toolStripButComplete.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButComplete.Text = "Complete";
+            this.toolStripButComplete.Click += new System.EventHandler(this.toolStripButComplete_Click);
+            // 
+            // toolStripButComTree
+            // 
+            this.toolStripButComTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComTree.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComTree.Image")));
+            this.toolStripButComTree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComTree.Name = "toolStripButComTree";
+            this.toolStripButComTree.Size = new System.Drawing.Size(130, 22);
+            this.toolStripButComTree.Text = "Complete Process Tree";
+            this.toolStripButComTree.Click += new System.EventHandler(this.toolStripButComTree_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(443, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(246, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Выберите программу в строке Search";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(443, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 34);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Введите время с которого\r\nначать блокировку:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(443, 366);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 34);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Введите время конца\r\n блокировки:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(654, 296);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(654, 380);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(142, 20);
+            this.dateTimePicker2.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
@@ -370,6 +426,11 @@
         private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem completeProcessTreeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRun;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
 
