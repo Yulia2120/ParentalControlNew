@@ -32,21 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemRun = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComplete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComTree = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelSearch = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.toolStripTextBoxSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.completeProcessTreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette
@@ -154,72 +159,84 @@
             this.kryptonButton1.TabIndex = 0;
             this.kryptonButton1.Values.Text = "kryptonButton1";
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(884, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
+            this.toolStripMenuItemRun,
+            this.exitToolStripMenuItemExit});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // exitToolStripMenuItem
+            // toolStripMenuItemRun
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.toolStripMenuItemRun.Name = "toolStripMenuItemRun";
+            this.toolStripMenuItemRun.Size = new System.Drawing.Size(153, 22);
+            this.toolStripMenuItemRun.Text = "Run a new task";
+            this.toolStripMenuItemRun.Click += new System.EventHandler(this.toolStripMenuItemRun_Click);
+            // 
+            // exitToolStripMenuItemExit
+            // 
+            this.exitToolStripMenuItemExit.Name = "exitToolStripMenuItemExit";
+            this.exitToolStripMenuItemExit.Size = new System.Drawing.Size(153, 22);
+            this.exitToolStripMenuItemExit.Text = "Exit";
+            this.exitToolStripMenuItemExit.Click += new System.EventHandler(this.exitToolStripMenuItemExit_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButRefresh,
+            this.toolStripButComplete,
+            this.toolStripButComTree});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(884, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButRefresh
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(50, 22);
-            this.toolStripButton1.Text = "Refresh";
+            this.toolStripButRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButRefresh.Image")));
+            this.toolStripButRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButRefresh.Name = "toolStripButRefresh";
+            this.toolStripButRefresh.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButRefresh.Text = "Refresh";
+            this.toolStripButRefresh.Click += new System.EventHandler(this.toolStripButRefresh_Click);
             // 
-            // toolStripButton2
+            // toolStripButComplete
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(63, 22);
-            this.toolStripButton2.Text = "Complete";
+            this.toolStripButComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComplete.Image")));
+            this.toolStripButComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComplete.Name = "toolStripButComplete";
+            this.toolStripButComplete.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButComplete.Text = "Complete";
+            this.toolStripButComplete.Click += new System.EventHandler(this.toolStripButComplete_Click);
             // 
-            // toolStripButton3
+            // toolStripButComTree
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(130, 22);
-            this.toolStripButton3.Text = "Complete Process Tree";
+            this.toolStripButComTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComTree.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComTree.Image")));
+            this.toolStripButComTree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComTree.Name = "toolStripButComTree";
+            this.toolStripButComTree.Size = new System.Drawing.Size(130, 22);
+            this.toolStripButComTree.Text = "Complete Process Tree";
+            this.toolStripButComTree.Click += new System.EventHandler(this.toolStripButComTree_Click);
             // 
             // toolStrip2
             // 
@@ -227,7 +244,7 @@
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabelSearch,
-            this.toolStripTextBox1});
+            this.toolStripTextBoxSearch});
             this.toolStrip2.Location = new System.Drawing.Point(0, 49);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(884, 25);
@@ -240,30 +257,56 @@
             this.toolStripLabelSearch.Size = new System.Drawing.Size(45, 22);
             this.toolStripLabelSearch.Text = "Search:";
             // 
-            // toolStripTextBox1
+            // toolStripTextBoxSearch
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBoxSearch.Name = "toolStripTextBoxSearch";
+            this.toolStripTextBoxSearch.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBoxSearch.TextChanged += new System.EventHandler(this.toolStripTextBoxSearch_TextChanged);
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(2, 77);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(205, 453);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView.ContextMenuStrip = this.contextMenuStrip;
+            this.listView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(2, 77);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(235, 453);
+            this.listView.TabIndex = 4;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "App";
             this.columnHeader1.Width = 200;
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.completeToolStripMenuItem,
+            this.completeProcessTreeToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(194, 48);
+            // 
+            // completeToolStripMenuItem
+            // 
+            this.completeToolStripMenuItem.Name = "completeToolStripMenuItem";
+            this.completeToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.completeToolStripMenuItem.Text = "Complete";
+            this.completeToolStripMenuItem.Click += new System.EventHandler(this.completeToolStripMenuItem_Click);
+            // 
+            // completeProcessTreeToolStripMenuItem
+            // 
+            this.completeProcessTreeToolStripMenuItem.Name = "completeProcessTreeToolStripMenuItem";
+            this.completeProcessTreeToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.completeProcessTreeToolStripMenuItem.Text = "Complete Process Tree";
+            this.completeProcessTreeToolStripMenuItem.Click += new System.EventHandler(this.completeProcessTreeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -271,13 +314,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 600);
             this.MinimizeBox = false;
@@ -287,12 +330,14 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParentalControl";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,18 +347,22 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItemExit;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButRefresh;
+        private System.Windows.Forms.ToolStripButton toolStripButComplete;
+        private System.Windows.Forms.ToolStripButton toolStripButComTree;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabelSearch;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxSearch;
+        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem completeProcessTreeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRun;
     }
 }
 
