@@ -40,7 +40,8 @@ namespace ParentalControlNew
                   Form1 s = new Form1();
                   s.ShowDialog();
                   Close();
-                }
+                  
+            }
             else
             {
                 MessageBox.Show("Enter valid user name or password please!", "Error");

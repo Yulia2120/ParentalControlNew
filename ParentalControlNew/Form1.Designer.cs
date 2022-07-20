@@ -31,12 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonBtnBlock = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemRun = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComplete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButComTree = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelSearch = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBoxSearch = new System.Windows.Forms.ToolStripTextBox();
@@ -45,14 +48,12 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.completeProcessTreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButRefresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButComplete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButComTree = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
             this.menuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -80,89 +81,90 @@
             this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // kryptonButton1
+            // kryptonBtnBlock
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(641, 487);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.Location = new System.Drawing.Point(641, 487);
+            this.kryptonBtnBlock.Name = "kryptonBtnBlock";
+            this.kryptonBtnBlock.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.OverrideDefault.Border.Rounding = 20;
-            this.kryptonButton1.OverrideDefault.Border.Width = 1;
-            this.kryptonButton1.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.OverrideDefault.Border.Rounding = 20;
+            this.kryptonBtnBlock.OverrideDefault.Border.Width = 1;
+            this.kryptonBtnBlock.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.OverrideFocus.Border.Rounding = 20;
-            this.kryptonButton1.OverrideFocus.Border.Width = 1;
-            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton1.Size = new System.Drawing.Size(155, 43);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Border.ColorAngle = 45F;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.OverrideFocus.Border.Rounding = 20;
+            this.kryptonBtnBlock.OverrideFocus.Border.Width = 1;
+            this.kryptonBtnBlock.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonBtnBlock.Size = new System.Drawing.Size(155, 43);
+            this.kryptonBtnBlock.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonBtnBlock.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StateCommon.Border.Rounding = 20;
-            this.kryptonButton1.StateCommon.Border.Width = 1;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.kryptonButton1.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.StateCommon.Border.Rounding = 20;
+            this.kryptonBtnBlock.StateCommon.Border.Width = 1;
+            this.kryptonBtnBlock.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonBtnBlock.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonBtnBlock.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.kryptonBtnBlock.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StateDisabled.Border.Rounding = 20;
-            this.kryptonButton1.StateDisabled.Border.Width = 1;
-            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.StateDisabled.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.StateDisabled.Border.Rounding = 20;
+            this.kryptonBtnBlock.StateDisabled.Border.Width = 1;
+            this.kryptonBtnBlock.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateNormal.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StateNormal.Border.Rounding = 20;
-            this.kryptonButton1.StateNormal.Border.Width = 1;
-            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.StateNormal.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.StateNormal.Border.Rounding = 20;
+            this.kryptonBtnBlock.StateNormal.Border.Width = 1;
+            this.kryptonBtnBlock.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(101)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StatePressed.Border.Rounding = 20;
-            this.kryptonButton1.StatePressed.Border.Width = 1;
-            this.kryptonButton1.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonBtnBlock.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.StatePressed.Border.Rounding = 20;
+            this.kryptonBtnBlock.StatePressed.Border.Width = 1;
+            this.kryptonBtnBlock.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonBtnBlock.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonBtnBlock.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.kryptonBtnBlock.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StateTracking.Border.Rounding = 20;
-            this.kryptonButton1.StateTracking.Border.Width = 1;
-            this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Text = "Заблокировать";
+            this.kryptonBtnBlock.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonBtnBlock.StateTracking.Border.Rounding = 20;
+            this.kryptonBtnBlock.StateTracking.Border.Width = 1;
+            this.kryptonBtnBlock.TabIndex = 0;
+            this.kryptonBtnBlock.Values.Text = "Заблокировать";
+            this.kryptonBtnBlock.Click += new System.EventHandler(this.kryptonBtnBlock_Click);
             // 
             // menuStrip
             // 
@@ -215,6 +217,36 @@
             this.toolStrip1.Size = new System.Drawing.Size(884, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButRefresh
+            // 
+            this.toolStripButRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButRefresh.Image")));
+            this.toolStripButRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButRefresh.Name = "toolStripButRefresh";
+            this.toolStripButRefresh.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButRefresh.Text = "Refresh";
+            this.toolStripButRefresh.Click += new System.EventHandler(this.toolStripButRefresh_Click);
+            // 
+            // toolStripButComplete
+            // 
+            this.toolStripButComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComplete.Image")));
+            this.toolStripButComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComplete.Name = "toolStripButComplete";
+            this.toolStripButComplete.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButComplete.Text = "Complete";
+            this.toolStripButComplete.Click += new System.EventHandler(this.toolStripButComplete_Click);
+            // 
+            // toolStripButComTree
+            // 
+            this.toolStripButComTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButComTree.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComTree.Image")));
+            this.toolStripButComTree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButComTree.Name = "toolStripButComTree";
+            this.toolStripButComTree.Size = new System.Drawing.Size(130, 22);
+            this.toolStripButComTree.Text = "Complete Process Tree";
+            this.toolStripButComTree.Click += new System.EventHandler(this.toolStripButComTree_Click);
             // 
             // toolStrip2
             // 
@@ -290,36 +322,6 @@
             this.completeProcessTreeToolStripMenuItem.Text = "Complete Process Tree";
             this.completeProcessTreeToolStripMenuItem.Click += new System.EventHandler(this.completeProcessTreeToolStripMenuItem_Click);
             // 
-            // toolStripButRefresh
-            // 
-            this.toolStripButRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButRefresh.Image")));
-            this.toolStripButRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButRefresh.Name = "toolStripButRefresh";
-            this.toolStripButRefresh.Size = new System.Drawing.Size(50, 22);
-            this.toolStripButRefresh.Text = "Refresh";
-            this.toolStripButRefresh.Click += new System.EventHandler(this.toolStripButRefresh_Click);
-            // 
-            // toolStripButComplete
-            // 
-            this.toolStripButComplete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButComplete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComplete.Image")));
-            this.toolStripButComplete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButComplete.Name = "toolStripButComplete";
-            this.toolStripButComplete.Size = new System.Drawing.Size(63, 22);
-            this.toolStripButComplete.Text = "Complete";
-            this.toolStripButComplete.Click += new System.EventHandler(this.toolStripButComplete_Click);
-            // 
-            // toolStripButComTree
-            // 
-            this.toolStripButComTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButComTree.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButComTree.Image")));
-            this.toolStripButComTree.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButComTree.Name = "toolStripButComTree";
-            this.toolStripButComTree.Size = new System.Drawing.Size(130, 22);
-            this.toolStripButComTree.Text = "Complete Process Tree";
-            this.toolStripButComTree.Click += new System.EventHandler(this.toolStripButComTree_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -350,21 +352,27 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Введите время конца\r\n блокировки:";
             // 
-            // dateTimePicker1
+            // timer
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(654, 296);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(142, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // dateTimePicker2
+            // dateTimePickerStart
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(654, 380);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(142, 20);
-            this.dateTimePicker2.TabIndex = 9;
+            this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(654, 297);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(142, 20);
+            this.dateTimePickerStart.TabIndex = 10;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(654, 366);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(142, 20);
+            this.dateTimePickerEnd.TabIndex = 11;
             // 
             // Form1
             // 
@@ -372,15 +380,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(230)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerEnd);
+            this.Controls.Add(this.dateTimePickerStart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.kryptonButton1);
+            this.Controls.Add(this.kryptonBtnBlock);
             this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.menuStrip;
@@ -409,7 +417,7 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonBtnBlock;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItemExit;
@@ -429,8 +437,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
     }
 }
 

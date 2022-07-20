@@ -1,16 +1,14 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
+using System.Management;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Management;
-using Microsoft.VisualBasic;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace ParentalControlNew
 {
@@ -221,11 +219,64 @@ namespace ParentalControlNew
 
         private void toolStripTextBoxSearch_TextChanged(object sender, EventArgs e)
         {
+
             GetProcesses();
             List<Process> filterproc = processes.Where((x) => x.ProcessName.ToLower().Contains(toolStripTextBoxSearch.Text.ToLower())).ToList();
             RefreshProcesList(filterproc, toolStripTextBoxSearch.Text);
         }
 
+        private void kryptonBtnBlock_Click(object sender, EventArgs e)
+        {
+            timer.Start();
+        }
+        //блокировка программы (название вводим в строку поиска)
+        bool task = true;
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            DateTime userTime = dateTimePickerStart.Value;
+            if (currentTime.Hour == userTime.Hour && currentTime.Minute == userTime.Minute && currentTime.Second == userTime.Second)
+                timer.Stop();
+
+            try
+            {
+               
+                    if (toolStripTextBoxSearch.Text != null)
+                {
+                    Task.Factory.StartNew(() =>
+                    {
+                        while (task)
+                        {
+                            var procceses = from proc in Process.GetProcesses()
+                                            where proc.ProcessName == toolStripTextBoxSearch.Text
+                                            select proc;
+                            try
+                            {
+                                foreach (var p in procceses)
+                                    KillProcess(p);
+                            }
+                            catch (Exception)
+                            {
+                            }
+                            Thread.Sleep(100);
+                        }
+                    });
+
+                }
+                DateTime currentTime2 = DateTime.Now;
+                DateTime userTime2 = dateTimePickerEnd.Value;
+                if (currentTime2.Hour == userTime2.Hour && currentTime2.Minute == userTime2.Minute && currentTime2.Second == userTime2.Second)
+                    task = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
       
+       
     }
 }
